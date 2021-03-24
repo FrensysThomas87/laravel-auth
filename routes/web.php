@@ -1,5 +1,6 @@
 <?php
 
+//use App\Http\Controllers\Admin\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('movie', 'MoviePublicController@index')->name('public.movie.index');
+
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->middleware('auth')
+    ->group(function(){
+        Route::resource('movie', MovieController::class);
+    });
