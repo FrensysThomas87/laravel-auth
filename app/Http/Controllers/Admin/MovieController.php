@@ -43,13 +43,15 @@ class MovieController extends Controller
 
         $movie = new Movie();
 
+
+
         $movie->fill($data);
 
         $movie->save();
 
         $newMovie = Movie::orderBy('id', 'desc')->first();
 
-        return redirect()->route('movie.show', $newMovie);
+        return redirect()->route('public.movie.show', $newMovie);
 
 
 
@@ -90,7 +92,7 @@ class MovieController extends Controller
 
         $movie->update($data);
 
-        return redirect()->route('movie.show', compact('movie'));
+        return redirect()->route('public.movie.show', compact('movie'));
     }
 
     /**
