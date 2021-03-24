@@ -1,6 +1,6 @@
 <?php
 
-//use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +27,6 @@ Route::get('movie', 'MoviePublicController@index')->name('public.movie.index');
 Route::prefix('admin')
     ->namespace('Admin')
     ->middleware('auth')
-    ->group(function(){
+    ->group(function() {
         Route::resource('movie', MovieController::class);
     });
