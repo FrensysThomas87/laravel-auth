@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         @yield('index-content')
+        @yield('show-content')
     </div>
 </body>
 </html>

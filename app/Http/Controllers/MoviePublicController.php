@@ -18,4 +18,16 @@ class MoviePublicController extends Controller
 
         return view('movie.index', compact('movie'));
     }
+
+
+      /**
+     * Display the specified resource.
+     *
+     * @param  Movie $movie
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Movie $movie)
+    {
+        return view('movie.show', compact('movie'));
+    }
 }
