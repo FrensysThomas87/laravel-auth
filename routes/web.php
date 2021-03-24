@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('movie', 'MoviePublicController@index')->name('public.movie.index');
 
-Route::get('movie/{movie}', 'MoviePublicController@show')->name('public.movie.index');
+Route::get('movie/{movie}', 'MoviePublicController@show')->name('public.movie.show');
 
 Route::prefix('admin')
     ->namespace('Admin')

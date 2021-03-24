@@ -12,6 +12,8 @@
     <div class="container">
         @yield('index-content')
         @yield('show-content')
+        @yield('create-content')
+        @yield('edit-content')
     </div>
 </body>
 </html>

@@ -39,6 +39,8 @@ class MovieController extends Controller
     {
         $data = $request->all();
 
+
+
         $movie = new Movie();
 
         $movie->fill($data);
