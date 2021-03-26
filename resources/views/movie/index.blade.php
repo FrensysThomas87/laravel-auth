@@ -25,7 +25,18 @@
                         <i class="fas fa-edit"></i>
                     </button>
                 </a>
+
+
+                    <button type="button" class="btn btn-danger bool-btn-destroy-index" data-toggle="modal" data-target="#exampleModalCenter{{$film->id}}">
+                        <i class="fas fa-trash-alt"></i>
+                            Elimina Film
+                    </button>
+                    @include('movie.modal')
+
+
             </td>
+
+
 
         </tr>
         @endif
@@ -33,5 +44,8 @@
 
 
     </tbody>
+
   </table>
+
+
 @endsection
