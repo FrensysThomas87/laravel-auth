@@ -20,7 +20,7 @@
 
             @if(Auth::check())
             <td>
-                <a href="">
+                <a href="{{route('movie.edit', ['movie' => $film])}}">
                     <button class="btn btn-primary">
                         <i class="fas fa-edit"></i>
                     </button>
